@@ -1,6 +1,24 @@
-import {Code} from "lucide-react";
+import {useState} from "react";
+import {cn} from "@/lib/utils.js";
+import { Code, Globe, Smartphone, Cpu } from "lucide-react";
+
+const aboutMe = [
+    { name: "Arabic", info: "Native", category: "Languages", icon: <Globe className="text-primary"/> },
+    { name: "English", info: "Full Professional", category: "Languages", icon: <Globe className="text-primary"/> },
+    { name: "Turkish", info: "Intermediate", category: "Languages", icon: <Globe className="text-primary"/> },
+    { name: "Backend Developer", info: "with Frameworks like Laravel and Fiber", category: "Introduction", icon: <Code className="text-primary"/> },
+    { name: "Android App Developer", info: "Mainly using Flutter", category: "Introduction", icon: <Smartphone className="text-primary"/> },
+    { name: "Machine Learning Enthusiast", info: "Worked on some small fun projects", category: "Introduction", icon: <Cpu className="text-primary"/> },
+];
+
+const categories=[
+    "Introduction",
+    "Languages"
+]
 
 export const AboutMeSection = () => {
+    const [activeCategory, setActiveCategory] = useState("Introduction")
+    const filteredAbout = aboutMe.filter((about)=> about.category === activeCategory);
     return (
         <section id="about" className="py-24 px-4 relative">
             {" "}
@@ -9,60 +27,50 @@ export const AboutMeSection = () => {
                     About <span className="text-primary"> Me</span>
                 </h2>
                 <div className=" grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div className=" space-y-6">
+                    <div className=" space-y-6 ">
                         <h3 className="text-2xl font-semibold ">
-                            Something to add here for a brief info
+                            Who Am I?
 
 
                         </h3>
-                        <p className="text-muted-foreground">
-                            something also to add here as well let's see maybe experience and so on
+                        <p className="text-muted-foreground text-start text-2xl ">
+                            I am a Computer Engineer, graduated from Karabük University in 2024,
+                            I am passionate about backend development and Android applications development with Flutter.
+                            I possess good skills in Machine learning and AI and am eager to expand my knowledge in these fields,
+                            alongside with some experience in game development. Committed to continuous learning and growing in these fields.
                         </p>
                         <div className=" flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                            <a href="#contact" className="cosmic-button"> Get in touch with me</a>
+                            <a href="#contact" className="cosmic-button text-lg"> Get in touch with me</a>
                             <a href=""
-                               className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 "> Download
+                               className="px-6 py-2 rounded-full border bg-white/90 text-primary hover:scale-105 duration-300 font-medium text-lg "> Download
                                 my CV
                             </a>
                         </div>
                     </div>
                     <div className=" grid grid-cols-1  gap-6">
-                        <div className="gradient-border p-6 card-hover">
-                            <div className="flex items-start gap-4">
-                                <div className=" p-3 rounded-full bg-primary/10">
-                                    <Code className=" h-6 w-6 text-primary"/>
-                                </div>
-                                <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Software Developer</h4>
-                                    <p className="text-muted-foreground"> more things about me idk what to put</p>
+                        <div className="flex flex-wrap  mb-4 gap-4 justify-around">
+                            {categories.map((category,key)=>(
+                                <button key={key} onClick={() =>setActiveCategory(category)} className={cn("px-5 py-2 rounded-full transition-colors duration-300 capitalize text-lg",
+                                    activeCategory===category ? "bg-primary text-primary-foreground" :"border border-primary text-primary hover: bg-primary/10 transition-colors duration-300" )}>{category}</button>
+                            ))}
 
+                        </div>
+                        {filteredAbout.map((item,key)=>(
+                            <div key={key} className="gradient-border p-6 card-hover">
+                                <div className="flex items-start gap-4">
+                                    <div className=" p-3 rounded-full bg-primary/10">
+                                        {item.icon}
+                                    </div>
+                                    <div className="text-left">
+                                        <h4 className="font-semibold text-lg">{item.name}</h4>
+                                        <p className="text-muted-foreground"> {item.info}</p>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="gradient-border p-6 card-hover">
-                            <div className="flex items-start gap-4">
-                                <div className=" p-3 rounded-full bg-primary/10">
-                                    <Code className=" h-6 w-6 text-primary"/>
-                                </div>
-                                <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Software Developer</h4>
-                                    <p className="text-muted-foreground"> more things about me idk what to put</p>
+                        ))}
 
-                                </div>
-                            </div>
-                        </div>
-                        <div className="gradient-border p-6 card-hover">
-                            <div className="flex items-start gap-4">
-                                <div className=" p-3 rounded-full bg-primary/10">
-                                    <Code className=" h-6 w-6 text-primary"/>
-                                </div>
-                                <div className="text-left">
-                                    <h4 className="font-semibold text-lg">Software Developer</h4>
-                                    <p className="text-muted-foreground"> more things about me idk what to put</p>
 
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
