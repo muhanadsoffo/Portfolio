@@ -1,4 +1,6 @@
 import {ExternalLink, Github} from "lucide-react";
+import {motion} from "framer-motion";
+import {fadeIn} from "@/lib/animation.js";
 
 const projects = [
     {
@@ -31,14 +33,17 @@ export const ProjectsSection = () => {
     return (
         <section id="projects" className="py-24 px-4 relative">
             <div className="container mx-auto max-w-5xl">
-                <h2 className=" text-3xl md:text-4xl font-bold mb-4 text-center"> Featured <span
+                <motion.h2 variants={fadeIn} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.3}}
+                           className=" text-3xl md:text-4xl font-bold mb-4 text-center"> Featured <span
                     className=" text-primary">Projects</span>
-                </h2>
-                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Check out my projects that I made throughout my journey! And this is not the end
-                </p>
+                </motion.h2>
+                <motion.p variants={fadeIn} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.4}} className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Check out my projects that I
+                    made throughout my journey! And this is not the end
+                </motion.p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-clos-3 gap-8">
-                    {projects.map((project,key)=>(
-                        <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col">
+                    {projects.map((project, key) => (
+                        <div key={key}
+                             className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col">
                             <div className="h-48 overflow-hidden">
                                 <img
                                     src={project.image}
@@ -66,8 +71,9 @@ export const ProjectsSection = () => {
 
                                 {/* GitHub link at bottom center */}
                                 <div className="mt-auto flex justify-center">
-                                    <div className="flex items-center space-x-3 border border-primary rounded-lg px-4 py-2 hover:bg-primary/10 transition-colors duration-300">
-                                        <Github className="text-primary w-5 h-5" />
+                                    <div
+                                        className="flex items-center space-x-3 border border-primary rounded-lg px-4 py-2 hover:bg-primary/10 transition-colors duration-300">
+                                        <Github className="text-primary w-5 h-5"/>
                                         <a
                                             href={project.url}
                                             target="_blank"

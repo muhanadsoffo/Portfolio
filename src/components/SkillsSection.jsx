@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {cn} from "@/lib/utils.js";
-
+import {motion} from "framer-motion";
+import {fadeIn, fadeUp, staggerContainer, zoomIn} from "@/lib/animation.js";
 const skills = [
     // Programming Languages
     { name: "C / C#", level: 80, category: "programming" },
@@ -42,21 +43,21 @@ export const SkillsSection = () => {
     return (
         <section id="skills" className="py-24 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
-                <h2 className=" text-3xl md:text-4xl font-bold  mb-12 text-center">
+                <motion.h2 variants={fadeIn} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.3}} className=" text-3xl md:text-4xl font-bold  mb-12 text-center">
                     My <span className="text-primary">Skills</span>
-                </h2>
+                </motion.h2>
                 <div className="flex flex-wrap justify-center gap-4 mb-12 text-lg">
                     {categories.map((category, key) => (
-                        <button key={key} onClick={() => setActiveCategory(category)}
+                        <motion.button variants={zoomIn} initial="hidden" whileInView="show"  viewport={{once: true, amount: 0.2}} key={key} onClick={() => setActiveCategory(category)}
                                 className={cn("px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                                     activeCategory === category ? "bg-primary text-primary-foreground" : "bg-secondary/70 text-foreground hover:bg-secondary",)}>
                             {category}
-                        </button>
+                        </motion.button>
                     ))}
                 </div>
-                <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filteredSkills.map((skill, key) => (
-                        <div key={key} className=" bg-card p-6 rounded-lg shadow-xs card-hover">
+                <motion.div key={activeCategory} variants={staggerContainer} initial="hidden" whileInView="show"  viewport={{ once: true, amount: 0.2 }} className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredSkills.map((skill) => (
+                        <motion.div variants={fadeUp} initial="hidden" whileInView="show" key={skill.name} viewport={{once: true, amount: 0.2}} className=" bg-card p-6 rounded-lg shadow-xs card-hover">
                             <div className="text-left mb-4">
                                 <h3 className="font-semibold text-lg"> {skill.name}</h3>
                             </div>
@@ -67,9 +68,9 @@ export const SkillsSection = () => {
                             <div className="text-right">
                                 <span className=" text-sm text-muted-foreground"> {skill.level} %</span>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     )
