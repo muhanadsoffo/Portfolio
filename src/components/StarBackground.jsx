@@ -79,7 +79,11 @@ export const StarBackground = () => {
                     }}
                 />
             ))}
-
+            <img
+                src="/astronaut.png"
+                alt="Floating astronaut"
+                className="absolute w-20 sm:w-28 md:w-36 lg:w-40 astronaut-floating left-5 md:left-20 top-1/3 -translate-y-1/2"
+            />
         </div>
     )
 }

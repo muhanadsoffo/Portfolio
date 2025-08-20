@@ -160,3 +160,15 @@
     padding: 0;
     text-align: center;
 }
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-40px) rotate(-5deg);
+    }
+}
+.astronaut-floating {
+    animation: floating 7s ease-in-out infinite;
+}

@@ -31,8 +31,6 @@ export const AboutMeSection = () => {
                     <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.2}} className=" space-y-6 ">
                         <h3 className="text-2xl font-semibold ">
                             Who Am I?
-
-
                         </h3>
                         <p className="text-muted-foreground text-start text-2xl px-2">
                             I am a Computer Engineer, graduated from Karabük University in 2024,
@@ -43,7 +41,7 @@ export const AboutMeSection = () => {
                         <div className=" flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <a href="#contact" className="cosmic-button text-lg"> Get in touch with me</a>
                             <a href=""
-                               className="px-6 py-2 rounded-full border bg-white/90 text-primary hover:scale-105 duration-300 font-medium text-lg "> Download
+                               className="px-6 py-2 rounded-full border bg-white/90 text-primary transform transition hover:scale-105 duration-300 font-medium text-lg "> Download
                                 my CV
                             </a>
                         </div>

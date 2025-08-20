@@ -41,7 +41,7 @@ export const Navbar = () => {
                 <div className="hidden md:flex space-x-8">
                     {navItems.map((item, key) => (
                         <a key={key} href={item.href}
-                           className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                           className="text-foreground/80 hover:text-primary transition-colors duration-300 font-semibold">
                             {item.name} </a>
                     ))}
                 </div>
