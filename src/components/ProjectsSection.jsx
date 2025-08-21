@@ -87,7 +87,7 @@ export const ProjectsSection = () => {
                                             target="_blank"
                                             className="text-foreground/80 hover:text-primary transition-colors duration-300"
                                         >
-                                            HitHub Codes
+                                            GitHub Codes
                                         </a>
                                     </div>
 
