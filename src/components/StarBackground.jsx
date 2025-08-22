@@ -1,9 +1,11 @@
 import {useEffect, useState} from "react";
+import {useLocation} from "react-router-dom";
 
 export const StarBackground = () => {
 
     const [stars, setStars] = useState([]);
     const [meteors, setMeteors] = useState([])
+    const location = useLocation();
     useEffect(() => {
         generateStars()
         generateMeteors()
@@ -79,11 +81,21 @@ export const StarBackground = () => {
                     }}
                 />
             ))}
-            <img
-                src="/astronaut.png"
-                alt="Floating astronaut"
-                className="absolute w-20 sm:w-28 md:w-36 lg:w-40 astronaut-floating left-5 md:left-20 top-1/3 -translate-y-1/2"
-            />
+            {location.pathname === "/" ? (
+                <img
+                    src="/astronaut.png"
+                    alt="Floating astronaut"
+                    className="absolute w-20 sm:w-28 md:w-36 lg:w-40 astronaut-floating left-5 md:left-20 top-1/3 -translate-y-1/2"
+                />
+            ) : (
+                <img
+                    src="/img.png"
+                    alt="Static image"
+                    className="planet absolute w-20 sm:w-50 md:w-60 lg:w-80 -bottom-5 left-20"
+                />
+            )}
+
+
         </div>
     )
 }

@@ -10,8 +10,9 @@ function App() {
 
   return (
     <>
-        <StarBackground/>
+
      <BrowserRouter>
+         <StarBackground/>
          <Routes>
              <Route index element={<Home />}/>
              <Route path="*" element={<NotFound/>}/>
