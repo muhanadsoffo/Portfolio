@@ -6,10 +6,15 @@ import "swiper/css/pagination";
 import 'swiper/css';
 import {fadeIn, slideInLeft, slideInRight} from "@/lib/animation.js";
 import {motion} from "framer-motion";
+import {useState} from "react";
 const images=[
-    "projects/bg.png",
-    "projects/flog.png",
-    "projects/f.jpeg",
+    "projects/a1.png",
+    "projects/a2.png",
+    "projects/a3.png",
+    "projects/a4.png",
+    "projects/a5.png",
+    "projects/a6.png",
+
 ]
 
 const tools=[
@@ -29,6 +34,8 @@ const keyFeatures=[
     {name: "Offline Caching: Uses Firestore's local persistence to allow smooth offline access to your data so it can be used offline", icon:"📥"},
 ]
 export const SanctuarAI = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    const [currentImg, setCurrentImg] = useState(null);
     return (
         <div className="container mx-auto max-w-5xl relative py-20">
 
@@ -81,11 +88,32 @@ export const SanctuarAI = () => {
                                 >
                                     {images.map((src, i) => (
                                         <SwiperSlide key={i} className="flex items-center justify-center">
-                                            <img src={src} alt={`Slide ${i}`} className="h-full w-full object-contain rounded-xl bg-black/20" />
+                                            <img
+                                                src={src}
+                                                alt={`Slide ${i}`}
+                                                className="h-full w-full object-contain rounded-xl bg-black/20 cursor-pointer"
+                                                onClick={() => {
+                                                    setCurrentImg(src);
+                                                    setIsOpen(true);
+                                                }}
+                                            />
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
 
+                                {/* Modal (outside Swiper) */}
+                                {isOpen && (
+                                    <div
+                                        className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        <img
+                                            src={currentImg}
+                                            alt="Enlarged"
+                                            className="max-w-[100%] max-h-[100%] object-contain rounded-lg"
+                                        />
+                                    </div>
+                                )}
                         </div>
 
                     </motion.div>

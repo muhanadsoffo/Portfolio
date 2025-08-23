@@ -9,7 +9,7 @@ const projects = [
         description: "some description",
         image: "/projects/flog.png",
         tags: ["Flutter", "Dart"],
-        detail:"project-1",
+        detail:"sparkflow",
         url: "https://github.com/muhanadsoffo/SparkFlow-app",
     },
     {
