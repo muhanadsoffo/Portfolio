@@ -98,7 +98,7 @@ export const ContactSection = () => {
                             </div>
                         </div>
                     </div>
-                    <motion.div variants={slideInRight} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className=" bg-card p-8 rounded-large shadow-xs">
+                    <motion.div variants={slideInRight} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className=" bg-gray-900 border-gray-700 shadow-lg border p-8 rounded-large rounded-xl">
                         <h3 className=" text-2xl font-semibold mb-6">Send a message</h3>
                         <form className="space-y-6" onSubmit={sendEmail} ref={form} >
                             <div >

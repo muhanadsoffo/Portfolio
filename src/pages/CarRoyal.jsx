@@ -77,7 +77,7 @@ export const CarRoyal = () => {
 
                 </motion.div>
                 <motion.div variants={slideInRight} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.3}}  className=" grid grid-cols-1 gap-6">
-                    <div className="w-full max-w-3xl bg-card rounded-2xl overflow-hidden shadow-lg border border-primary/30  mx-auto h-60 md:h-80 lg:h-120">
+                    <div className="w-full max-w-3xl bg-card rounded-2xl overflow-hidden shadow-lg border   mx-auto h-60 md:h-80 lg:h-120">
                         <Swiper
                             modules={[Navigation, Pagination]}
 
@@ -129,7 +129,7 @@ export const CarRoyal = () => {
             </motion.h2>
             <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.4}} className=" grid grid-cols-1 md:grid-cols-2 gap-6 ">
                 {keyFeatures.map((feature)=>(
-                    <div className="bg-card p-6 rounded-xl shadow-xs card-hover">
+                    <div className="bg-card p-6 rounded-xl shadow-lg border card-hover">
                         <div className=" flex items-center gap-4">
                             <div className=" p-3 rounded-full bg-primary/10 ">
                                 <h1 className=" text-2xl ">

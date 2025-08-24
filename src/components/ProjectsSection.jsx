@@ -48,7 +48,7 @@ export const ProjectsSection = () => {
                 <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.2}} className="grid grid-cols-1 md:grid-cols-2 lg:grid-clos-3 gap-8">
                     {projects.map((project, key) => (
                         <div key={key}
-                             className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col">
+                             className="group bg-gray-900 shadow-lg border  rounded-lg overflow-hidden border-gray-700 card-hover flex flex-col">
                             <div className="h-85 overflow-hidden">
                                 <img
                                     src={project.image}
@@ -63,7 +63,7 @@ export const ProjectsSection = () => {
                                     {project.tags.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="px-2 py-1 text-xs font-medium rounded-full border bg-primary/50 text-secondary-foreground">
+                                            className="px-2 py-1 text-xs font-medium rounded-full border bg-primary text-secondary-foreground ">
                                             {tag}</span>
                                     ))}
                                 </div>
