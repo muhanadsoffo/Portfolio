@@ -1,8 +1,40 @@
 import {Linkedin, Mail, MapPin, Phone, Instagram, Facebook, Send} from "lucide-react";
 import {cn} from "@/lib/utils.js";
 import {motion} from "framer-motion";
-import {fadeIn, slideInLeft} from "@/lib/animation.js";
+import {fadeIn, slideInLeft, slideInRight} from "@/lib/animation.js";
+
+import {useRef, useState} from "react";
+import emailjs from '@emailjs/browser';
 export const ContactSection = () => {
+    const [status, setStatus] = useState()
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_ndrgone', 'template_ibsnjhe', form.current, {
+                publicKey: '7_ea9OK74Y6aJNpRE',
+            })
+            .then(
+                () => {
+                    setStatus("success");
+
+                    // refresh page after short delay
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
+                })
+            .catch((error) => {
+                console.error("Error sending email:", error);
+                setStatus("error");
+
+                // optional: refresh anyway
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2000);
+            });
+    };
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
@@ -66,30 +98,44 @@ export const ContactSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=" bg-card p-8 rounded-large shadow-xs">
+                    <motion.div variants={slideInRight} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className=" bg-card p-8 rounded-large shadow-xs">
                         <h3 className=" text-2xl font-semibold mb-6">Send a message</h3>
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={sendEmail} ref={form} >
                             <div >
-                                <label htmlFor="name" className=" block text-sm font-medium mb-2">Your Name</label>
+                                <label htmlFor="name" className=" block text-sm font-medium mb-2 text-start">Your Name</label>
                                 <input type="text" id="name" name="name" required className=" w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" placeholder="Enter your name..."/>
                             </div>
                             <div >
-                                <label htmlFor="name" className=" block text-sm font-medium mb-2">Your Email</label>
+                                <label htmlFor="name" className=" block text-sm font-medium mb-2 text-start">Your Email</label>
                                 <input type="email" id="email" name="email" required className=" w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary" placeholder="Enter your email..."/>
                             </div>
                             <div >
-                                <label htmlFor="name" className=" block text-sm font-medium mb-2">Your Message</label>
+                                <label htmlFor="name" className=" block text-sm font-medium mb-2 text-start">Your Message</label>
                                 <textarea  id="message" name="message" required className=" w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none" placeholder="Hey I have a great idea for you..."/>
                             </div>
                             <button type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2",
-
-                                )}>Send Message<Send size="18"/>
+                                )}>Send Message<Send size="18"
+                            />
                             </button>
                         </form>
-                    </div>
+
+                        {status === "success" && (
+                            <div className="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded-lg shadow-md animate-bounce">
+                                ✅ Email sent successfully!
+                            </div>
+                        )}
+                        {status === "error" && (
+                            <div className="fixed bottom-5 right-5 bg-red-500 text-white px-4 py-2 rounded-lg shadow-md animate-bounce">
+                                ❌ Failed to send email. Try again.
+                            </div>
+                        )}
+                    </motion.div>
 
                 </div>
             </div>
+
         </section>
+
     )
+
 }

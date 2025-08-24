@@ -6,29 +6,29 @@ const projects = [
     {
         id: 1,
         title: "SparkFlow",
-        description: "some description",
-        image: "/projects/flog.png",
-        tags: ["Flutter", "Dart"],
+        description: "Android Application",
+        image: "/projects/img1.png",
+        tags: ["Flutter", "Dart","Local Notifications","Hive"],
         detail:"sparkflow",
         url: "https://github.com/muhanadsoffo/SparkFlow-app",
     },
     {
         id: 2,
         title: "SancturarAI",
-        description: "some description",
-        image: "/projects/bg.png",
-        tags: ["Flutter", "Dart"],
+        description: "Android Application",
+        image: "/projects/img1.png",
+        tags: ["Flutter", "Dart","Firebase","Firestore","OpenRouter"],
         detail:"sanctuarai",
         url: "https://github.com/muhanadsoffo/SanctuarAI",
     },
     {
         id: 3,
-        title: "SparkFlow",
-        description: "some description",
-        image: "/projects/sparkflow.png",
-        tags: ["Flutter", "Dart"],
-        detail:"project-3",
-        url: "https://sparkflow.io",
+        title: "CarRoyal",
+        description: "Website",
+        image: "/projects/img.png",
+        tags: ["Laravel", "SQL","Stripe","Botman","HTML","Css","Javascript"],
+        detail:"carroyal",
+        url: "https://github.com/muhanadsoffo/enhanced-car-rental",
     }
 ]
 
@@ -45,7 +45,7 @@ export const ProjectsSection = () => {
                     that I
                     made throughout my journey! And this is not the end
                 </motion.p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-clos-3 gap-8">
+                <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.2}} className="grid grid-cols-1 md:grid-cols-2 lg:grid-clos-3 gap-8">
                     {projects.map((project, key) => (
                         <div key={key}
                              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col">
@@ -96,7 +96,7 @@ export const ProjectsSection = () => {
                         </div>
 
                     ))}
-                </div>
+                </motion.div>
             </div>
 
         </section>
