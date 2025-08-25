@@ -44,8 +44,7 @@ export const ExperienceSection = () => {
                                 index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                             }`}>
                             {/* Timeline dot */}
-                            <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-white shadow-lg z-10"></div>
-
+                            <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-white shadow-lg z-10"></div>
                             {/* Content */}
                             <div className={`ml-16 md:ml-0 md:w-1/2 ${
                                 index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
@@ -55,7 +54,7 @@ export const ExperienceSection = () => {
                                     {/* Header */}
                                     <div className="flex items-start justify-between mb-3">
                                         <div>
-                                            <h3 className="text-xl font-bold text-primary mb-1">{exp.title}</h3>
+                                            <h3 className="text-xl font-bold text-primary mb-1 text-start">{exp.title}</h3>
                                             <h4 className="text-lg font-semibold text-blue-500 mb-2 text-start">{exp.company}</h4>
                                         </div>
                                         <span className={`px-3 py-1 rounded-full text-xs font-medium ${

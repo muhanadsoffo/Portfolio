@@ -40,7 +40,8 @@ export const AboutMeSection = () => {
                         </p>
                         <div className=" flex flex-col sm:flex-row gap-4 pt-4 justify-start">
                             <a href="#contact" className="cosmic-button text-lg"> Get in touch with me</a>
-                            <a href=""
+                            <a href="/Muhenned Sıffu.pdf"
+                               download="Muhenned Sıffu.pdf"
                                className="px-6 py-2 rounded-full border bg-white/90 text-primary transform transition hover:scale-105 duration-300 font-medium text-lg "> Download
                                 my CV
                             </a>

@@ -45,7 +45,7 @@ export const ProjectsSection = () => {
                     that I
                     made throughout my journey! And this is not the end
                 </motion.p>
-                <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.2}} className="grid grid-cols-1 md:grid-cols-2 lg:grid-clos-3 gap-8">
+                <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{once: true, amount: 0.1}} className="grid grid-cols-1 md:grid-cols-2 lg:grid-clos-3 gap-8">
                     {projects.map((project, key) => (
                         <div key={key}
                              className="group bg-gray-900 shadow-lg border  rounded-lg overflow-hidden border-gray-700 card-hover flex flex-col">

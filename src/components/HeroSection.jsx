@@ -10,16 +10,18 @@ export const HeroSection = () => {
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                         <span className="opacity-0 animate-fade-in">Hi, I'm</span>{" "}
                         <span className="text-primary opacity-0 animate-fade-in-delay-1">Muhenned</span>{" "}
-                        <span className=" text-gradient ml-2 opacity-0 animate-fade-in-delay-2">Siffu</span>
+                        <span className=" text-gradient ml-2 opacity-0 animate-fade-in-delay-2">Sıffu</span>
                     </h1>
                     <p className=" text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
 
                         Hey there! Welcome to my corner of the internet, I'm a developer who turns coffee into code and ideas into apps. Always learning something new,
                         always ready to collaborate. Let's build the future, one commit at a time.
                     </p>
-                    <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+                    <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 items-center justify-center">
                         <a href="#projects" className="cosmic-button text-lg">
-                            View My Work
+                            View My Projects
+                        </a> <a href="https://github.com/muhanadsoffo" target="_blank" className="m-2 px-6 py-2 rounded-full border bg-white/90 text-primary font-medium text-lg transition-all hover:scale-105 duration-300">
+                            GitHub Account
                         </a>
                     </div>
 
