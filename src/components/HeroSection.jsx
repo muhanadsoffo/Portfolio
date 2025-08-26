@@ -14,8 +14,10 @@ export const HeroSection = () => {
                     </h1>
                     <p className=" text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
 
-                        Hey there! Welcome to my corner of the internet, I'm a developer who turns coffee into code and ideas into apps. Always learning something new,
-                        always ready to collaborate. Let's build the future, one commit at a time.
+                        Hey there! Welcome to my little corner of the internet,
+                        I am a developer who's interested in turning thoughts into applications.
+                        eager for more knowledge and learning something new, a partner is always welcomed.
+                        So let's build something meaningful, one commit at a time.
                     </p>
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 items-center justify-center">
                         <a href="#projects" className="cosmic-button text-lg">

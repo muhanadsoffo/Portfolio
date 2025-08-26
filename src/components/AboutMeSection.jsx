@@ -33,9 +33,9 @@ export const AboutMeSection = () => {
                             Who Am I?
                         </h3>
                         <p className="text-muted-foreground text-start text-2xl pt-5">
-                            As a Computer Engineer graduate from Karabük University (2024), I specialize in backend development and Android application development using Flutter.
+                            I am Computer Engineer, graduated from Karabük University (2024), I specialize in backend development and Android application development using Flutter.
                             My technical toolkit includes strong Machine Learning and AI capabilities,
-                            Additionally, I bring experience in game development,
+                            Additionally, I have some experience in game development,
                             I'm committed to lifelong learning and pushing the boundaries of technology.
                         </p>
                         <div className=" flex flex-col sm:flex-row gap-4 pt-4 justify-start">

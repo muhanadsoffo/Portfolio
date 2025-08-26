@@ -16,7 +16,7 @@ const projects = [
         id: 2,
         title: "SancturarAI",
         description: "Android Application",
-        image: "/projects/img1.png",
+        image: "/projects/img_1.png",
         tags: ["Flutter", "Dart","Firebase","Firestore","OpenRouter"],
         detail:"sanctuarai",
         url: "https://github.com/muhanadsoffo/SanctuarAI",
