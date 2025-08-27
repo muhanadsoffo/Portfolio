@@ -16,7 +16,7 @@ export const HeroSection = () => {
 
                         Hey there! Welcome to my little corner of the internet,
                         I am a developer who's interested in turning thoughts into applications.
-                        eager for more knowledge and learning something new, a partner is always welcomed.
+                        Eager for more knowledge and learning something new, a partner is always welcomed.
                         So let's build something meaningful, one commit at a time.
                     </p>
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 items-center justify-center">
