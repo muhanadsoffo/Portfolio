@@ -9,7 +9,9 @@ const experiences = [
         period: "2024.Jul.1 - 2024.Aug.26",
         location: "Karabük, Turkey",
         type: "Internship",
-        description: "I contributed on building the website for this company, the website was developed using Go programming language and Fiber framework",
+        description: " Contributed to developing the company website using Go and Fiber framework where I participated in the frontend and backend architecture, routing, and internal system integration tasks" +
+            ", I also Collaborated with senior engineers to implement efficient server-side logic," +
+            " and being exposed to the working environment where deadlines and meetings are essential things that I learned there.",
         technologies: ["Golang", "Fiber", "SQL"]
     },
 

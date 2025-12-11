@@ -7,6 +7,7 @@ const skills = [
     { name: "C / C#", level: 80, category: "programming" },
     { name: "PHP", level: 40, category: "programming" },
     { name: "Go", level: 35, category: "programming" },
+    { name: "Dart", level: 45, category: "programming" },
     { name: "SQL", level: 50, category: "programming" },
     { name: "Python", level: 50, category: "programming" },
     { name: "JavaScript", level: 30, category: "programming" },
@@ -15,8 +16,13 @@ const skills = [
     { name: "Flutter", level: 70, category: "frameworks & Tools" },
     { name: "Laravel", level: 55, category: "frameworks & Tools" },
     { name: "Unity Engine", level: 45, category: "frameworks & Tools" },
-    { name: "React", level: 30, category: "frameworks & Tools" },
+    { name: "React", level: 35, category: "frameworks & Tools" },
+    { name: "NextJs", level: 50, category: "frameworks & Tools" },
+    { name: "Tailwindcss", level: 50, category: "frameworks & Tools" },
+    { name: "Firebase", level: 50, category: "frameworks & Tools" },
+    { name: "Firestore", level: 50, category: "frameworks & Tools" },
     { name: "PyTorch", level: 25, category: "frameworks & Tools" },
+    { name: "Prisma", level: 35, category: "frameworks & Tools" },
 
     // AI / Data
     { name: "Machine Learning", level: 75, category: "AI & data" },
@@ -65,9 +71,7 @@ export const SkillsSection = () => {
                                 <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
                                      style={{width: skill.level + "%"}}/>
                             </div>
-                            <div className="text-right">
-                                <span className=" text-sm text-muted-foreground"> {skill.level} %</span>
-                            </div>
+
                         </motion.div>
                     ))}
                 </motion.div>

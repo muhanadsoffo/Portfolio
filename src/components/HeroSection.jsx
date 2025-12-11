@@ -12,12 +12,16 @@ export const HeroSection = () => {
                         <span className="text-primary opacity-0 animate-fade-in-delay-1">Muhenned</span>{" "}
                         <span className=" text-gradient ml-2 opacity-0 animate-fade-in-delay-2">Sıffu</span>
                     </h1>
+                    <p className="text-2xl md:text-4xl font-bold tracking-tight opacity-0 animate-fade-in-delay-2">
+                        <span className="text-primary ">Fullstack </span>
+                        Developer
+                    </p>
                     <p className=" text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
 
                         Hey there! Welcome to my little corner of the internet,
-                        I am a developer who's interested in turning thoughts into applications.
-                        Eager for more knowledge and learning something new, a partner is always welcomed.
-                        So let's build something meaningful, one commit at a time.
+                         I’m a Fullstack Developer who loves bringing ideas to life.
+                        NextJs, Flutter , Tailwindcss, whatever it is I can handle it! I enjoy learning new tech, experimenting with AI, and building things that actually help people.
+
                     </p>
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 items-center justify-center">
                         <a href="#projects" className="cosmic-button text-lg">

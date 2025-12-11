@@ -78,7 +78,7 @@ export const ContactSection = () => {
                                 <div className="text-start">
                                     <h4 className="font-medium">Location</h4>
                                     <a  className="text-muted-foreground hover:text-primary transition-colors">
-                                        Bursa, Turkey
+                                        Istanbul, Turkey
                                     </a>
                                 </div>
                             </div>
