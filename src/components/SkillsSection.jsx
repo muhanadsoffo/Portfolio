@@ -11,6 +11,7 @@ const skills = [
     { name: "SQL", level: 50, category: "programming" },
     { name: "Python", level: 50, category: "programming" },
     { name: "JavaScript", level: 30, category: "programming" },
+    { name: "TypeScript", level: 30, category: "programming" },
 
     // Frameworks & Tools
     { name: "Flutter", level: 70, category: "frameworks & Tools" },
@@ -18,6 +19,7 @@ const skills = [
     { name: "Unity Engine", level: 45, category: "frameworks & Tools" },
     { name: "React", level: 35, category: "frameworks & Tools" },
     { name: "NextJs", level: 50, category: "frameworks & Tools" },
+    { name: "Express Js", level: 45, category: "frameworks & Tools" },
     { name: "Tailwindcss", level: 50, category: "frameworks & Tools" },
     { name: "Firebase", level: 50, category: "frameworks & Tools" },
     { name: "Firestore", level: 50, category: "frameworks & Tools" },

@@ -20,7 +20,7 @@ export const HeroSection = () => {
 
                         Hey there! Welcome to my little corner of the internet,
                          I’m a Fullstack Developer who loves bringing ideas to life.
-                        NextJs, Flutter , Tailwindcss, whatever it is I can handle it! I enjoy learning new tech, experimenting with AI, and building things that actually help people.
+                        NextJs, Flutter , Express, whatever it is I can handle it! I enjoy learning new tech, experimenting with AI, and building things that actually help people.
 
                     </p>
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 items-center justify-center">
